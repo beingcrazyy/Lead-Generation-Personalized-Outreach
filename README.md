@@ -33,7 +33,7 @@ Install dependencies:
 
 ```bash
 pip install -r requirements.txt
-
+```
 
 
 
@@ -44,9 +44,10 @@ Clone this repo or copy the code into your project folder.
 
 Create a .env file in the project root with your API keys:
 
+```bash
 APOLLO_API_KEY=your_apollo_api_key_here
 OPENAI_API_KEY=your_openai_api_key_here
-
+```
 
 Make sure your folder structure looks like:
 
@@ -65,8 +66,9 @@ Usage
 
 Run the script:
 
+```bash
 python main.py
-
+```
 
 You’ll be prompted (in plain English) for:
 
