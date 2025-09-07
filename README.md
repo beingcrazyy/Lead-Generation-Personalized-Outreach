@@ -33,3 +33,76 @@ Install dependencies:
 
 ```bash
 pip install -r requirements.txt
+
+
+
+
+
+Setup
+
+Clone this repo or copy the code into your project folder.
+
+Create a .env file in the project root with your API keys:
+
+APOLLO_API_KEY=your_apollo_api_key_here
+OPENAI_API_KEY=your_openai_api_key_here
+
+
+Make sure your folder structure looks like:
+
+LeadGen_Automation/
+├─ main.py
+├─ Module/
+│  ├─ apollo_integration.py
+│  ├─ web_scraping.py
+│  ├─ outreach_generator.py
+│  ├─ data_export.py
+├─ requirements.txt
+├─ README.md
+└─ .env
+
+Usage
+
+Run the script:
+
+python main.py
+
+
+You’ll be prompted (in plain English) for:
+
+Industry/keyword (default: software)
+
+Company size range (default: 50-200)
+
+Location (default: Bangalore)
+
+Number of companies (default: 10)
+
+Press Enter to accept defaults.
+
+The script will:
+
+Search Apollo for matching companies.
+
+Scrape each website.
+
+Generate AI summaries & outreach messages.
+
+Save everything to final_leads.csv in the project root.
+
+Output CSV
+
+Each row contains:
+
+| id | company_name | website | linkedin_url | twitter_url | phone_number | description | outreach_subject | outreach_body |
+
+Logs
+
+The script logs INFO messages for progress and ERROR messages for problems.
+Check the console output to monitor each step.
+
+Notes
+
+If Apollo API fails (rate limits, free tier limits), you can plug in your own mock data in apollo_integration.py to keep the pipeline working.
+
+If the OpenAI API key is missing, the script returns stub summaries and outreach messages for testing.
