@@ -70,45 +70,38 @@ Run the script:
 python main.py
 ```
 
-How to Run the Script
+## How to Run the Script
 
-When you run the script, you’ll be prompted for the following (defaults in parentheses):
+**1. Run the Script**
+
+When you run the script you will be prompted for:
 
 Industry / keyword (default: software)
-
 Company size range (default: 50–200)
-
 Location (default: Bangalore)
-
 Number of companies (default: 10)
 
 Press Enter at any prompt to accept the default value.
 
-What the Script Does
+**2. What the Script Does**
 
 Searches Apollo for matching companies.
-
 Scrapes each company’s website.
-
-Generates AI summaries and personalized outreach messages.
+Generates AI summaries and outreach messages.
 
 Saves everything to final_leads.csv in the project root.
 
-Output
-
+**3. Output**
 The generated CSV contains one row per company with the following columns:
-
 | id | company_name | website | linkedin_url | twitter_url | phone_number | description | outreach_subject | outreach_body |
 
-Logging
+**4. Logging**
 
 INFO messages show progress.
-
 ERROR messages indicate problems.
 Check the console output to monitor each step.
 
-Fallbacks
+**5. Fallbacks**
 
 If the Apollo API fails (rate limits / free tier), you can plug mock data into apollo_integration.py to keep the pipeline working.
-
-If the OpenAI API key is missing, the script returns stub summaries.and outreach messages for testing.
+If the OpenAI API key is missing, the script returns stub summaries.
